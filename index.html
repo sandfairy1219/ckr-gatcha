@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뽑기 시스템</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>뽑기 시스템</h1>
+        
+        <div class="gacha-container">
+            <div class="gacha-machine">
+                <div class="gacha-top"></div>
+                <div class="gacha-middle">
+                    <div class="gacha-window">
+                        <div class="item-display">?</div>
+                    </div>
+                </div>
+                <div class="gacha-bottom"></div>
+            </div>
+            
+            <div class="controls">
+                <button id="draw-btn" class="draw-btn">뽑기!</button>
+                <button id="draw-ten-btn" class="draw-ten-btn">10연속 뽑기</button>
+            </div>
+            
+            <div class="result-area">
+                <h2>뽑기 결과</h2>
+                <div id="result" class="result-display"></div>
+                <div id="history" class="history-display">
+                    <h3>이전 뽑기 결과</h3>
+                    <ul id="history-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/gacha.js"></script>
+</body>
+</html>
