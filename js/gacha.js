@@ -211,8 +211,8 @@ document.addEventListener('DOMContentLoaded', function() {
         switch(rarity) {
             case 'common': return '일반';
             case 'rare': return '희귀';
-            case 'epic': return '영웅';
-            case 'legendary': return '전설';
+            case 'EPIC': return '영웅';
+            case 'LEGENDARY': return '전설';
             default: return '';
         }
     }
