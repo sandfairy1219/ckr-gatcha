@@ -3,13 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const beastprob = 0.0371;
     const beastsoulgemprob = 0.2132;
     const ancientprob = 0.0472;
-    const ancientsoulgemprob = 0.2132;
+    const ancientsoulgemprob = 0.2698;
     const legendaryprob = 0.0472;
+    const legendarysoulgemprob = 0.2698;
     const superEpicprob = 0.0360;
+    const superEpicsoulgemprob = 0.2304;
     const dragonprob = 0.0472;
+    const dragonsoulgemprob = 0.2698;
     const epicprob = 0.0301;
+    const epicsoulgemprob = 0.1574;
     const rareprob = 0.3722;
-    const commonprob = 1.2772;
+    const raresoulgemprob = 2.2658;
+    const commonprob = 1.2772; 
+    const commonsoulgemprob = 4.1947;
 
 
     const items = [
@@ -148,7 +154,150 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 133, name: '천사맛 쿠키', rarity:'common', probability :commonprob},
         { id: 134, name: '마법사맛 쿠키', rarity:'common', probability :commonprob},
         { id: 135, name: '딸기맛 쿠키', rarity:'common', probability :commonprob},
-        { id: 136, name: '용감한 쿠키', rarity:'common', probability :commonprob}
+        { id: 136, name: '용감한 쿠키', rarity:'common', probability :commonprob},
+        { id: 137, name: '쉐도우밀크 쿠키의 영혼석', rarity:'beastsoulgem', probability :beastsoulgemprob},
+        { id: 138, name: '버닝스파이스 쿠키의 영혼석', rarity:'beastsoulgem', probability :beastsoulgemprob},
+        { id: 139, name: '미스틱플라워 쿠키의 영혼석', rarity:'beastsoulgem', probability :beastsoulgemprob},
+        { id: 140, name: '세인트릴리 쿠키의 영혼석', rarity:'ancientsoulgem', probability :ancientsoulgemprob},
+        { id: 141, name: '골드치즈 쿠키의 영혼석', rarity:'ancientsoulgem', probability :ancientsoulgemprob},
+        { id: 142, name: '다크카카오 쿠키의 영혼석', rarity:'ancientsoulgem', probability :ancientsoulgemprob},
+        { id: 143, name: '홀리베리 쿠키의 영혼석', rarity:'ancientsoulgem', probability :ancientsoulgemprob},
+        { id: 144, name: '퓨어바닐라 쿠키의 영혼석', rarity:'ancientsoulgem', probability :ancientsoulgemprob},
+        { id: 145, name: '퓨어바닐라 쿠키의 각성 영혼석 20개', rarity:'ancientsoulgem', probability :0.0371},
+        { id: 146, name: '퓨어바닐라 쿠키의 각성 영혼석', rarity:'anciensoulgem', probability :0.2132},
+        { id: 147, name: '골드치즈 쿠키의 각성 영혼석 20개', rarity:'ancientsoulgem', probability :0.0371},
+        { id: 148, name: '골드치즈 쿠키의 각성 영혼석', rarity:'ancientsoulgem', probability :0.2132},
+        { id: 149, name: '다크카카오 쿠키의 각성 영혼석 20개', rarity:'ancientsoulgem', probability :0.0371},
+        { id: 150, name: '다크카카오 쿠키의 각성 영혼석', rarity:'ancientsoulgem', probability :0.2132},
+        { id: 151, name: '바람궁수 쿠키의 영혼석', rarity:'legendarysoulgem', probability :legendaryprob},
+        { id: 152, name: '뇌신무장 쿠키의 영혼석', rarity:'legendarysoulgem', probability :  legendaryprob},
+        { id: 153, name: '달빛술사 쿠키의 영혼석', rarity:'legendarysoulgem', probability :legendaryprob},
+        { id: 154, name: '블랙펄 쿠키의 영혼석', rarity:'legendarysoulgem', probability :legendaryprob},
+        { id: 155, name: '서리여왕 쿠키의 영혼석', rarity:'legendarysoulgem', probability :legendaryprob},
+        { id: 156, name: '바다요정 쿠키의 영혼석', rarity:'legendarysoulgem', probability :legendaryprob},
+        { id: 157, name: '용과 드래곤 쿠키의 영혼석', rarity:'dragonsoulgem', probability :dragonprob},
+        { id: 158, name: '동백꽃맛 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 159, name: '요정왕 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 160, name: '크림슨 코랄 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 161, name: '샤이닝글리터맛 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 162, name: '캡사이신맛 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 163, name: '스타더스트 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 164, name: '소르베맛 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 165, name: '오이스터맛 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 166, name: '클로티드 크림 쿠키의 영혼석', rarity:'superepicsoulgem', probability :superEpicprob},
+        { id: 167, name: '웨딩케이크맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 168, name: '블랙사파이어맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 169, name: '캔디애플맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 170, name: '옥춘맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 171, name: '그린티무스맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 172, name: '초코드리즐 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 173, name: '아라모드맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 174, name: '금계화맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 175, name: '단계화맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 176, name: '스모크치즈맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 177, name: '넛맥타이거맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 178, name: '별산호맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 179, name: '복사꽃맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 180, name: '구름해태맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 181, name: '성게맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 182, name: '생토노레맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 183, name: '버터롤맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 184, name: '말차맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 185, name: '수은기사 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 186, name: '은방울맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 187, name: '의적맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 188, name: '크림브륄레맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 189, name: '린저 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 190, name: '모짜렐라맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 191, name: '올리브맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 192, name: '페투치니맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 193, name: '바스크치즈맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 194, name: '프릴해파리맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 195, name: '박하사탕맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 196, name: '블랙레모네이드맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 197, name: '락스타맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 198, name: '타르트타탕맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 199, name: '로얄마가린맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 200, name: '퀸아망 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 201, name: '푸룬주스 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 202, name: '에일리언 도넛의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 203, name: '블루파이맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 204, name: '밀키웨이맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 205, name: '예언자맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 206, name: '솔방울맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 207, name: '음유시인맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 208, name: '마카롱맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 209, name: '찰스의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 210, name: '검볼다이버맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 211, name: '캡틴캐비어맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 212, name: '크림 유니콘 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 213, name: '휘낭시에맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 214, name: '크런치초코칩 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 215, name: '와일드베리맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 216, name: '벚꽃맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 217, name: '흑당맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 218, name: '아포가토맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 219, name: '실론나이트맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 220, name: '에클레어맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 221, name: '코코아맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 222, name: '목화맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 223, name: '펌킨파이맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 224, name: '트위즐젤리맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 225, name: '마라맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 226, name: '달토끼맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 227, name: '라즈베리맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 228, name: '파로페맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 229, name: '오징어먹물맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 230, name: '샤벳상어맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 231, name: '라일락맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 232, name: '망고맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 233, name: '벨벳케이크맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 234, name: '페스츄리맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 235, name: '무화과맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 236, name: '딸기크레페맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 237, name: '블랙레이즌맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 238, name: '아몬드맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 239, name: '라떼맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 240, name: '구미호맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 241, name: '민트초코맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 242, name: '웨어울프맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 243, name: '칠리맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 244, name: '다크초코맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 245, name: '눈설탕맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 246, name: '감초맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 247, name: '스파클링맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 248, name: '뱀파이어맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 249, name: '우유맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 250, name: '석류맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 251, name: '허브맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 252, name: '독버섯맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 253, name: '자색고구마맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 254, name: '정글전사 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 255, name: '호밀맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 256, name: '에스프레소맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 257, name: '마들렌맛 쿠키의 영혼석', rarity:'epicsoulgem', probability :epicsoulgemprob},
+        { id: 258, name: '악마맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 259, name: '커스터트 3세맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 260, name: '블랙베리맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 261, name: '아보카도맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 262, name: '당근맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 263, name: '체리맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 264, name: '양파맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 265, name: '용사맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 266, name: '버블껌맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 267, name: '탐험가맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 268, name: '연금술사맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 269, name: '팬케이크맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 270, name: '클로버맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 271, name: '공주맛 쿠키의 영혼석', rarity:'raresoulgem', probability :raresoulgemprob},
+        { id: 272, name: '비트맛 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob},
+        { id: 273, name: '근육맛 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob},
+        { id: 274, name: '닌자맛 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob},
+        { id: 275, name: '천사맛 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob},
+        { id: 276, name: '마법사맛 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob},
+        { id: 277, name: '딸기맛 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob},
+        { id: 278, name: '용감한 쿠키의 영혼석', rarity:'commonsoulgem', probability :commonprob}
+
     ];
 
     const drawBtn = document.getElementById('draw-btn');
@@ -185,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 아이템 카드 생성 함수
     function createItemCard(item) {
         const card = document.createElement('div');
-        card.className = `item-card ${item.rarity}`;
+        card.className = `item-card ${item.rarity.toLowerCase()}`;
         
         const icon = document.createElement('div');
         icon.className = 'item-icon';
@@ -213,6 +362,11 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'rare': return '희귀';
             case 'EPIC': return '영웅';
             case 'LEGENDARY': return '전설';
+            case 'ANCIENT': return '에인션트';
+            case 'BEAST': return '비스트';
+            case 'DRAGON': return '드래곤';
+            case 'SUPER EPIC': return '슈퍼 에픽';
+            case 'soulgem': return '영혼석';
             default: return '';
         }
     }

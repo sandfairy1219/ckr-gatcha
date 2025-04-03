@@ -37,6 +37,13 @@ h1 {
     position: relative;
 }
 
+.gacha-machine-image {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
 .gacha-top {
     width: 100%;
     height: 60px;
@@ -138,22 +145,86 @@ h1 {
     overflow: hidden;
 }
 
+.item-card.common {
+    border: 2px solid brown;
+    background-color: #d2b48c; /* 옅은 갈색 */
+}
+
 .item-card.rare {
-    background: linear-gradient(135deg, #fdf8e1, #f7e98e);
-    border-color: #ffd700;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    border: 2px solid blue;
+    background-color: #add8e6; /* 옅은 파란색 */
 }
 
 .item-card.epic {
-    background: linear-gradient(135deg, #e0f2ff, #a6d1ff);
-    border-color: #4a91ff;
-    box-shadow: 0 0 10px rgba(74, 145, 255, 0.5);
+    border: 2px solid purple;
+    background-color: #dda0dd; /* 옅은 보라색 */
+}
+
+.item-card.superepic {
+    background: linear-gradient(135deg, #f0e5ff, #d1c4ff);
+    border-color: #2740b0;
+    box-shadow: 0 0 10px #2740b0;
+    border: 2px solid rgb(194, 88, 255);
 }
 
 .item-card.legendary {
-    background: linear-gradient(135deg, #ffe0e0, #ffb8b8);
-    border-color: #ff4d4d;
-    box-shadow: 0 0 15px rgba(255, 77, 77, 0.7);
+    border: 2px solid yellow;
+    background-color: #fffacd; /* 옅은 노란색 */
+}
+
+.item-card.dragon {
+    border: 2px solid orange;
+    background-color: #ffcc99; /* 옅은 주황색 */
+}
+
+.item-card.ancient {
+    border: 2px solid navy;
+    background-color: #b0c4de; /* 옅은 남색 */
+}
+
+.item-card.beast {
+    border: 2px solid red;
+    background-color: #f08080; /* 옅은 빨간색 */
+}
+
+.item-card.soulgem {
+    clip-path: polygon(50% 10%, 90% 25%, 90% 75%, 50% 90%, 10% 75%, 10% 25%);
+    transition: all 0.3s ease;
+}
+
+.item-card.commonsoulgem {
+    border: 2px solid brown;
+    background-color: #e6ccb2; /* 옅은 갈색 */
+}
+
+.item-card.raresoulgem {
+    border: 2px solid blue;
+    background-color: #b3d9ff; /* 옅은 파란색 */
+}
+
+.item-card.epicsoulgem {
+    border: 2px solid purple;
+    background-color: #e6ccff; /* 옅은 보라색 */
+}
+
+.item-card.legendarysoulgem {
+    border: 2px solid yellow;
+    background-color: #fffacd; /* 옅은 노란색 */
+}
+
+.item-card.ancientsoulgem {
+    border: 2px solid navy;
+    background-color: #cce6ff; /* 옅은 남색 */
+}
+
+.item-card.dragonsoulgem {
+    border: 2px solid orange;
+    background-color: #ffe6cc; /* 옅은 주황색 */
+}
+
+.item-card.beastsoulgem {
+    border: 2px solid red;
+    background-color: #ffcccc; /* 옅은 빨간색 */
 }
 
 .item-icon {
